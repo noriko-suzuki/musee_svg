@@ -1,0 +1,261 @@
+.feature_list_1{
+  .feature1_1{
+    width: 227px;
+    height: 227px;
+
+    .cls-1{
+      fill:transparent;
+      stroke:$color-gray;
+      stroke-miterlimit:10;
+      stroke-width:32px;
+    }
+    .cls-2{
+      fill:transparent;
+      stroke:$color-blue;
+      stroke-miterlimit:10;
+      stroke-width:32px;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+    }
+    .cls-3{
+      fill:$color-blue;
+    }
+
+    &.start{
+      .cls-2{
+        animation: line 1.3s $easeInOutQuad 0s forwards;
+      }
+    }
+  }
+
+  .feature1_2{
+    width: 227px;
+    height: 227px;
+
+    .cls-1{
+      fill:transparent;
+      stroke:$color-gray;
+      stroke-miterlimit:10;
+      stroke-width:32px;
+    }
+    .cls-2{
+      fill:transparent;
+      stroke:$color-blue;
+      stroke-miterlimit:10;
+      stroke-width:32px;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+    }
+    .cls-3{
+      fill:$color-blue;
+    }
+
+    &.start{
+      .cls-2{
+        animation: line 1.3s $easeInOutQuad 0s forwards;
+      }
+    }
+  }
+  .feature1_3{
+    width: 300px;
+    height: auto;
+
+    .cls-1{
+      fill:$color-gray;
+    }
+    .cls-2{
+      opacity: 0;
+      fill:$color-blue;
+      transform-origin: 50% 50%;
+    }
+    .cls-3{
+      opacity: 0;
+      fill: #fff;
+      transform-origin: 50% 50%;
+    }
+    .cls-4{
+      fill: $color-blue;
+    }
+
+    &.start{
+      .pin-1{
+        opacity: 1;
+        animation: scaleIn .25s $easeInOutQuad 0s forwards;
+      }
+      .pin-2{
+        opacity: 1;
+        animation: scaleIn .25s $easeInOutQuad .1s forwards;
+      }
+      .pin-3{
+        opacity: 1;
+        animation: scaleIn .25s $easeInOutQuad .15s forwards;
+      }
+    }
+  }
+}
+
+
+.feature_list_2{
+  .feature2_1{
+    width: 256px;
+    height: auto;
+
+    &.start{
+      .cls-3{
+        animation: fadeIn .25s $easeInOutQuad .65s forwards;
+      }
+      .cls-4{
+        opacity: 1;
+        animation: line 2s $easeInOutQuad 0s forwards;
+      }
+      .cls-5{
+        opacity: 1;
+        animation: line 2s $easeInOutQuad 0s forwards;
+      }
+    }
+  }
+
+  .feature2_2{
+    width: 258px;
+    height: auto;
+
+    &.start{
+      .cls-3{
+        animation: fadeIn .25s $easeInOutQuad .65s forwards;
+      }
+      .cls-4{
+        opacity: 1;
+        animation: line 2s $easeInOutQuad 0s forwards;
+      }
+      .cls-5{
+        opacity: 1;
+        animation: line 2s $easeInOutQuad 0s forwards;
+      }
+    }
+  }
+
+  .feature2_3{
+    width: 258px;
+    height: auto;
+
+    &.start{
+      .cls-3{
+        animation: fadeIn .25s $easeInOutQuad .65s forwards;
+      }
+      .cls-4{
+        opacity: 1;
+        animation: line 2s $easeInOutQuad 0s forwards;
+      }
+      .cls-5{
+        opacity: 1;
+        animation: line 2s $easeInOutQuad 0s forwards;
+      }
+    }
+  }
+
+  .cls-1{
+    fill:$color-blue;
+  }
+  .cls-2{
+    fill:$color-gray;
+  }
+  .cls-3{
+    opacity: 0;
+    fill:#666;
+    transform-origin: center right;
+  }
+  .cls-4,.cls-5{
+    fill:transparent;
+    stroke-miterlimit:10;
+    stroke-width:81px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  .cls-4{
+    stroke:$color-blue;
+  }
+  .cls-5{
+    stroke:$color-gray;
+  }
+  .cls-6{
+    fill:#fff;
+  } 
+}
+
+.feature_list_3{
+  .feature3_1{
+    width: 300px;
+    height: auto;
+
+    .cls-1{
+      fill:$color-blue;
+    }
+    .cls-2{
+      fill:#fff;
+    }
+    .cls-3,.cls-4,.cls-5,.cls-6{
+      fill:none;stroke-miterlimit:10;
+    }
+    .cls-3,.cls-4{
+      stroke:#fff;
+    }
+    .cls-4{
+      stroke-width:3px;
+    }
+    .cls-5,.cls-6{
+      stroke:$color-blue;
+    }
+    .cls-6{
+      opacity: 0;
+      stroke-width:2px;
+      transform-origin: 50% 50%;
+    }
+
+    &.start{
+      .cls-6{
+        opacity: 1;
+        animation: scaleIn 2s $easeInOutQuad 0s infinite;        
+      }
+    }
+  }
+}
+
+
+@keyframes line {
+  0% {
+    stroke-dashoffset: 1000;
+    fill:transparent;
+  }
+  50% {
+    fill:transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.1, 1.1);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  80% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
