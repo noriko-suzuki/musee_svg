@@ -228,6 +228,7 @@
   .feature3_3{
     width: 100px;
     height: auto;
+    position: relative;
 
     .cls-1{
       fill: $color-blue;
@@ -235,13 +236,29 @@
     .cls-2{
       fill: #fff;
     }
-    .shine{
-      transform-origin: 50% 50%;
+    .reflection_container{
+      width:90%;
+      height:70%;
+      margin: 0 auto;
+      position: absolute;
+      overflow: hidden;
+      transform: translate(6%, 19%);
+    }
+    .reflection {
+      width: 30px;
+      height: 100%;
+      position: absolute;
+      top: -180px;
+      left: 0;
+      background-color: rgba(255, 255, 255, .8);
+      // opacity: 0;
+      transform: rotate(45deg);
+      transform-origin: 0% 0%;
     }
 
     &.start{
-      .shine{
-        animation: scaleShine 3.5s $easeInOutQuad 0s infinite;
+      .reflection{
+        animation: reflection 7s $easeInOutQuad infinite;
       }
     }
   }
@@ -310,26 +327,25 @@
     transform: rotateY(0deg);
   }
 }
-@keyframes scaleShine {
+@keyframes reflection {
   0% {
-    transform: scale(1, 1);
-  }
-  10% {
-    transform: scale(.9, .9);
-  }
-  15% {
-    transform: scale(1.2, 1.2);
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
   }
   20% {
-    transform: scale(1, 1);
+    transform: scale(0) rotate(45deg);
+    opacity: 1;
   }
-  25% {
-    transform: scale(1.2, 1.2);
+  21% {
+    transform: scale(4) rotate(45deg);
+    opacity: 1;
   }
-  30% {
-    transform: scale(1, 1);
+  40% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
   }
   100% {
-    transform: scale(1, 1);
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
   }
 }
