@@ -1,7 +1,6 @@
-(window.onload = function() {
+$(document).ready(function(){
   $(".svganim").removeClass("start");
   setTimeout(function(){
     $(".svganim").addClass("start");
   },200);
-})();
-
+});

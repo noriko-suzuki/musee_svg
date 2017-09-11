@@ -23,7 +23,7 @@
 
     &.start{
       .cls-2{
-        animation: line 1.3s $easeInOutQuad 0s forwards;
+        animation: lineAnim 1.3s $easeInOutQuad 0s forwards;
       }
     }
   }
@@ -52,7 +52,7 @@
 
     &.start{
       .cls-2{
-        animation: line 1.3s $easeInOutQuad 0s forwards;
+        animation: lineAnim 1.3s $easeInOutQuad 0s forwards;
       }
     }
   }
@@ -80,15 +80,15 @@
     &.start{
       .pin-1{
         opacity: 1;
-        animation: scaleIn .25s $easeInOutQuad 0s forwards;
+        animation: scaleinPin .15s $easeInOutQuad 0s forwards;
       }
       .pin-2{
         opacity: 1;
-        animation: scaleIn .25s $easeInOutQuad .1s forwards;
+        animation: scaleinPin .15s $easeInOutQuad .1s forwards;
       }
       .pin-3{
         opacity: 1;
-        animation: scaleIn .25s $easeInOutQuad .15s forwards;
+        animation: scaleinPin .15s $easeInOutQuad .2s forwards;
       }
     }
   }
@@ -102,15 +102,15 @@
 
     &.start{
       .cls-3{
-        animation: fadeIn .25s $easeInOutQuad .65s forwards;
+        animation: fadeinLine .25s $easeInOutQuad .65s forwards;
       }
       .cls-4{
         opacity: 1;
-        animation: line 2s $easeInOutQuad 0s forwards;
+        animation: lineAnim 2s $easeInOutQuad 0s forwards;
       }
       .cls-5{
         opacity: 1;
-        animation: line 2s $easeInOutQuad 0s forwards;
+        animation: lineAnim 2s $easeInOutQuad 0s forwards;
       }
     }
   }
@@ -121,15 +121,15 @@
 
     &.start{
       .cls-3{
-        animation: fadeIn .25s $easeInOutQuad .65s forwards;
+        animation: fadeinLine .25s $easeInOutQuad .65s forwards;
       }
       .cls-4{
         opacity: 1;
-        animation: line 2s $easeInOutQuad 0s forwards;
+        animation: lineAnim 2s $easeInOutQuad 0s forwards;
       }
       .cls-5{
         opacity: 1;
-        animation: line 2s $easeInOutQuad 0s forwards;
+        animation: lineAnim 2s $easeInOutQuad 0s forwards;
       }
     }
   }
@@ -140,15 +140,15 @@
 
     &.start{
       .cls-3{
-        animation: fadeIn .25s $easeInOutQuad .65s forwards;
+        animation: fadeinLine .25s $easeInOutQuad .65s forwards;
       }
       .cls-4{
         opacity: 1;
-        animation: line 2s $easeInOutQuad 0s forwards;
+        animation: lineAnim 2s $easeInOutQuad 0s forwards;
       }
       .cls-5{
         opacity: 1;
-        animation: line 2s $easeInOutQuad 0s forwards;
+        animation: lineAnim 2s $easeInOutQuad 0s forwards;
       }
     }
   }
@@ -180,7 +180,7 @@
   }
   .cls-6{
     fill:#fff;
-  } 
+  }
 }
 
 .feature_list_3{
@@ -199,18 +199,56 @@
       transform-origin: 50% 50%;
     }
 
-
     &.start{
       .arrow{
         opacity: 1;
-        animation: scaleIn 2.3s $easeInOutQuad 0s infinite;        
+        animation: scaleArrow 2s $easeInOutQuad 0s infinite;
+      }
+    }
+  }
+
+  .feature3_2{
+    width: 186px;
+    height: auto;
+
+    .cls-1{
+      fill: $color-blue;
+    }
+    .shine{
+      transform-origin: 50% 50%;
+    }
+
+    &.start{
+      .shine{
+        animation: rotateShine 3.5s $easeInOutQuad 1s infinite;
+      }
+    }
+  }
+
+  .feature3_3{
+    width: 100px;
+    height: auto;
+
+    .cls-1{
+      fill: $color-blue;
+    }
+    .cls-2{
+      fill: #fff;
+    }
+    .shine{
+      transform-origin: 50% 50%;
+    }
+
+    &.start{
+      .shine{
+        animation: scaleShine 3.5s $easeInOutQuad 0s infinite;
       }
     }
   }
 }
 
 
-@keyframes line {
+@keyframes lineAnim{
   0% {
     stroke-dashoffset: 1000;
     fill:transparent;
@@ -222,7 +260,7 @@
     stroke-dashoffset: 0;
   }
 }
-@keyframes fadeIn {
+@keyframes fadeinLine {
   0% {
     opacity: 0;
   }
@@ -230,14 +268,65 @@
     opacity: 1;
   }
 }
-@keyframes scaleIn {
+@keyframes scaleinPin {
+  0% {
+    transform: scale(1, 1);
+  }
+  75% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes scaleArrow {
+  0% {
+    transform: scale(1, 1);
+  }
+  5% {
+    transform: scale(.9, .9);
+  }
+  15% {
+    transform: scale(1.1, 1.1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes rotateShine {
+  0% {
+    transform: rotateY(0deg);
+  }
+  8% {
+    transform: rotateY(135deg);
+  }
+  16% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes scaleShine {
   0% {
     transform: scale(1, 1);
   }
   10% {
+    transform: scale(.9, .9);
+  }
+  15% {
     transform: scale(1.2, 1.2);
   }
+  20% {
+    transform: scale(1, 1);
+  }
   25% {
+    transform: scale(1.2, 1.2);
+  }
+  30% {
     transform: scale(1, 1);
   }
   100% {
