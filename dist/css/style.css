@@ -626,6 +626,57 @@ a:active {
     -webkit-transform: scale(0.9);
     transform: scale(0.9); } }
 
+#loading {
+  background: #4faae3; }
+
+.loading {
+  width: 32px;
+  position: relative; }
+
+#icon {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%); }
+
+#icon .shine {
+  fill: #fff;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: rotateShine02 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite;
+  animation: rotateShine02 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite; }
+
+@-webkit-keyframes rotateShine02 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  8% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  16% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); } }
+
+@keyframes rotateShine02 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  8% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  16% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); } }
+
 .feature_list_1 .feature1_1 {
   width: 227px;
   height: 227px; }
