@@ -3,4 +3,9 @@ $(document).ready(function(){
   setTimeout(function(){
     $(".svganim").addClass("start");
   },200);
+
+  $("#opening").removeClass("start");
+  setTimeout(function(){
+    $("#opening").addClass("start");
+  },200);
 });

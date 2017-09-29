@@ -634,8 +634,8 @@ a:active {
   position: relative; }
 
 #icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -676,6 +676,81 @@ a:active {
   100% {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg); } }
+
+#loading {
+  background: #4faae3; }
+
+.loading {
+  width: 32px;
+  position: relative; }
+
+#opening {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: rotateShineOP 1.75s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s forwards;
+  animation: rotateShineOP 1.75s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s forwards; }
+
+#opening .shine {
+  fill: #fff; }
+
+@-webkit-keyframes rotateShineOP {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  10% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  20% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  30% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  80% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); }
+  85% {
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65); }
+  90% {
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65); }
+  100% {
+    -webkit-transform: scale(150);
+    transform: scale(150); } }
+
+@keyframes rotateShineOP {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  10% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  20% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  30% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  80% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8); }
+  85% {
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65); }
+  90% {
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65); }
+  100% {
+    -webkit-transform: scale(150);
+    transform: scale(150); } }
 
 .feature_list_1 .feature1_1 {
   width: 227px;
